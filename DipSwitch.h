@@ -1,3 +1,5 @@
+#include <Joystick.h>
+
 #ifndef DIP_SWITCH_H
 #define DIP_SWITCH_H
 
