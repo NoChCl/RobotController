@@ -16,30 +16,30 @@ Slider slider3(A1, SLIDER_MIN, SLIDER_MAX);
 Slider slider4(A0, SLIDER_MIN, SLIDER_MAX);
 
 int vals[] = {0,
-              408,
+              91,
+              178,
+              242,
               317,
-              539,
-              152,
-              467,
-              394,
-              577,
-              19,
-              415,
-              327,
-              544,
-              168,
-              473,
-              402,
-              581};
-DipSwitch dipSwitch(A6, vals);
+              363,
+              408,
+              443,
+              512,
+              536,
+              561,
+              582,
+              607,
+              623,
+              640,
+              654};
+DipSwitch dipSwitch(A6, vals, 5);
 
 Button latchingButton1(2);
 Button latchingButton2(3);
 
-ArcadeButton button1(15, 6, false);
-ArcadeButton button2(14, 7, false);
-ArcadeButton button3(16, 8, false);
-ArcadeButton button4(10, 9, false);
+ArcadeButton button3(15, 14, false);
+ArcadeButton button4(16, 10, false);
+ArcadeButton button2(6, 7, false);
+ArcadeButton button1(8, 9, false);
 
 void setup() {
   // put your setup code here, to run once:
@@ -83,7 +83,7 @@ void setJoystick(){
   Joystick.setXAxis(slider1.getValue());  
   Joystick.setRxAxis(slider2.getValue());
   Joystick.setYAxis(slider3.getValue());
-  Joystick.setRxAxis(slider4.getValue());
+  Joystick.setRyAxis(slider4.getValue());
 
   Joystick.setButton(0, button1.get());
   Joystick.setButton(1, button2.get());
