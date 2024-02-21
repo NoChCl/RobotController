@@ -4,6 +4,8 @@ pygame.init()
 size = [1000,600]
 screen = pygame.display.set_mode(size)
 clock = pygame.time.Clock();
+pygame.display.set_caption("Controler Simulator")
+
 
 pygame.joystick.init()
 joystick = pygame.joystick.Joystick(0)
@@ -61,7 +63,7 @@ while True:
     
     
     
-    print(axes, buttons)
+    #print(axes, buttons)
     
     
     if buttons[0]:
@@ -84,6 +86,16 @@ while True:
     else:
         n4Button=n4Button1
     
+    if buttons[4]:
+        t1Button = tButton2
+    else:
+        t1Button=tButton1
+    
+    if buttons[5]:
+        t2Button = tButton2
+    else:
+        t2Button=tButton1
+    
     screen.fill([0,0,255])
 
     screen.blit(slider, [850, 400-axes[6]])
@@ -95,11 +107,11 @@ while True:
     screen.blit(slider, [250, 400-axes[0]])
     screen.blit(n1Button, [265-75/2, 100])
     
-    screen.blit(tButton1, [75, 200])
-    screen.blit(tButton2, [75, 300])
+    screen.blit(t1Button, [75, 200])
+    screen.blit(t2Button, [75, 300])
     
     
     
-    #print(clock.get_fps())
+    print(clock.get_fps())
     pygame.display.flip()
-    clock.tick(100)
+    clock.tick(1000000)
